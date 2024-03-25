@@ -32,7 +32,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         reply_markup=ReplyKeyboardMarkup.from_button(
             KeyboardButton(
                 text="Open the color picker!",
-                web_app=WebAppInfo(url="https://python-telegram-bot.org/static/webappbot"),
+                web_app=WebAppInfo(url="https://google.com"),
             )
         ),
     )
@@ -56,7 +56,7 @@ async def web_app_data(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
 def main() -> None:
     """Start the bot."""
     # Create the Application and pass it your bot's token.
-    application = Application.builder().token("TOKEN").build()
+    application = Application.builder().token("6230005392:AAHEaCesLHFdry66cQcM-lApWd69JSYklVo").build()
 
     application.add_handler(CommandHandler("start", start))
     application.add_handler(MessageHandler(filters.StatusUpdate.WEB_APP_DATA, web_app_data))
